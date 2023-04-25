@@ -1,4 +1,4 @@
-<img src="https://jurgesetze.de/static/media/logoJurGesetze.24ef74a288abbbd3b45a.png" width="600">
+<img src="https://jurgesetze.de/static/media/logoJurGesetze.24ef74a288abbbd3b45a.png" width="540">
 
 <a href="https://twitter.com/jurgesetze"><img src="https://img.shields.io/twitter/follow/jurgesetze?label=Twitter&color=black" alt="Twitter"></a>
 
