@@ -3,7 +3,9 @@
 [![Discord Shield](https://img.shields.io/discord/1042366481003991060?color=000000&label=Discord&logo=fdgssdf)](https://discord.gg/rg4EeebJ)
 <a href="https://twitter.com/jurgesetze"><img src="https://img.shields.io/twitter/follow/jurgesetze?label=Twitter&color=black" alt="Twitter"></a>
 
-JurGesetze ist ein **Parser und eine API für Deutsche Gesetze** auf Grundlage der Rechtsinformationen des Bundes [gesetze-im-internet.de](http://www.gesetze-im-internet.de/). Für eine maschinelle Weiterverarbeitung (z.B. Datenbanken, Frontend, Synopsen, spezifische Abfragen etc.), sind **einheitliche Strukturen und zeitgemäße Dateiformate** unerlässlich. Durch JurGesetze werden aus den vom `Bundesministerium der Justiz` bereitgestellten 
+JurGesetze ist ein **Parser und eine API für Deutsche Gesetze** auf Grundlage der Rechtsinformationen des Bundes [gesetze-im-internet.de](http://www.gesetze-im-internet.de/). Für eine maschinelle Weiterverarbeitung (z.B. Datenbanken, Frontend, Synopsen, spezifische Abfragen etc.), sind **einheitliche Strukturen und zeitgemäße Dateiformate** unerlässlich. 
+
+Durch JurGesetze werden aus den vom `Bundesministerium der Justiz` bereitgestellten 
 `.xml-Dateien` einheitliche, übersichtliche und leicht verständliche maschinenlesbare `Objekte`/`Dateien`. Ferner bietet Ihnen jurGesetze auch eine **moderne Benutzeroberfläche zum Abrufen der aktuellen Gesetze im Internet.** 
 
 ## Was ist jurGesetze?
