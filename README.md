@@ -1,40 +1,22 @@
-<img src="https://jurgesetze.de/static/media/logoJurGesetze.24ef74a288abbbd3b45a.png" width="540">
+<img src="https://jurgesetze.de/static/media/deutschegesetze.png" width="540">
 
-[![Discord Shield](https://img.shields.io/discord/1042366481003991060?color=000000&label=Discord&logo=fdgssdf)](https://discord.gg/rg4EeebJ)
-<a href="https://twitter.com/jurgesetze"><img src="https://img.shields.io/twitter/follow/jurgesetze?label=Twitter&color=black" alt="Twitter"></a>
-
-JurGesetze ist ein **Parser und eine API für Deutsche Gesetze** auf Grundlage der Rechtsinformationen des Bundes [gesetze-im-internet.de](http://www.gesetze-im-internet.de/). Für eine maschinelle Weiterverarbeitung (z.B. Datenbanken, Frontend, Synopsen, spezifische Abfragen etc.), sind **einheitliche Strukturen und zeitgemäße Dateiformate** unerlässlich. 
-
+JurGesetze ist ein **Parser für Deutsche Gesetze** auf Grundlage der Rechtsinformationen des Bundes [gesetze-im-internet.de](http://www.gesetze-im-internet.de/). Für eine maschinelle Weiterverarbeitung (z.B. Datenbanken, Frontend, Synopsen, spezifische Abfragen etc.), sind **einheitliche Strukturen und zeitgemäße Dateiformate** unerlässlich. 
 Durch JurGesetze werden aus den vom `Bundesministerium der Justiz` bereitgestellten 
-`.xml-Dateien` einheitliche, übersichtliche und leicht verständliche maschinenlesbare `Objekte`/`Dateien`. Ferner bietet Ihnen jurGesetze auch eine **moderne Benutzeroberfläche zum Abrufen der aktuellen Gesetze im Internet.** 
+`.xml-Dateien` einheitliche, übersichtliche und leicht verständliche maschinenlesbare `Objekte`/`Dateien`. 
 
 ## Was ist jurGesetze?
 
-- **Open Data API**: Schnittstelle um einzelne Paragraphen und ganze Gesetzesbücher im JSON Format abzurufen
-- **Parser & Scraper**: Parsed alle Deutschen Gesetze des `BMJ` in `.json` oder simple `Objekte`
-- **Benutzeroberfläche**: Modernes UI Design und hilfreiche Funktionen, um effizient zu arbeiten
+- **Open Data API**: Schnittstelle um einzelne Paragraphen und ganze Gesetzesbücher abzurufen
+- **Parser & Scraper**: Parsed alle Deutschen Gesetze des `BMJ` in `.json` bzw. als Gesetzes-`Objekte`
 
-## Wie starten?
-
-Wenn Sie bereits Node.JS installiert haben, können Sie 
-
-```
-npx ts-node index.tsx
-```
-oder in `./scraper`
-```
-npx ts-node Scraper.ts
-```
-
-ausführen, um zu starten. Alternativ können Sie mit `npx ts-node Scraper.ts` in `./scraper` alle aktuellen Gesetze im `.xml-Format` herunterladen 
-und anschließend mit `npx ts-node index.tsx` einzeln parsen. 
-
-## Beispiele
+## Nutzung
 
 Es können kleine stilistische (_Kursiv_, **Fett** etc.) Veränderungen in den Paragraphen einfach hervorgehoben werden, aber auch 
-komplexe Strukturen wie Tabelle, Listen oder ähnliches.
+komplexe Strukturen wie Tabelle, Listen oder ähnliches werden dargestellt.
 
-bsp. § 433 BGB als `Objekt:
+Grundsätzlich wird zunächst zwischen `Content`, `Directory` (Inhaltsverzeichnis) und `Meta` (wesentliche Informationen) unterschieden. Im `Content` sind insbesondere die Gesetzesnormen zu finden. Es wird dabei zwischen verschiedenen sog. `metaTypes` unterschieden. Es gibt einfache Normen (`NORM`), weggefallene Normen (`WEGGEFALLEN_NORM`), Eingangsbemerkungen (`ENTRY_PHRASE`), Anhänge (`ADDITIVE`), Schlussformeln (`COMPLIMENTARY`) und `OTHER`. In den jeweiligen Normen wird dann streng zwischen Text, Tabellen, Listen etc. unterschieden. 
+
+bsp. § 433 BGB als `NORM:`
 
         {
             "title": "Vertragstypische Pflichten beim Kaufvertrag",
@@ -65,7 +47,17 @@ bsp. § 433 BGB als `Objekt:
                 "paragraphFootnote": null
             }
         }
+        
+`Strukturen:`
 
+        {
+            "id": 30030030,
+            "name": "Titel 3",
+            "title": "Erwerb und Verlust des Eigentums an beweglichen Sachen",
+            "metaType": "STRUCTURE"
+        }
+
+In `Meta` werden alle wesentlichen Informationen über das Gesetzesbuch gesammelt dargestellt. 
 `Meta-Objekt` des Bürgerlichen Gesetzbuches:
 
     "meta": {
@@ -124,19 +116,22 @@ bsp. § 433 BGB als `Objekt:
         "toc": null
     }
     
-Strukturen:
 
-        {
-            "id": 30030030,
-            "name": "Titel 3",
-            "title": "Erwerb und Verlust des Eigentums an beweglichen Sachen",
-            "metaType": "STRUCTURE"
-        }
-    
-## Nutzung
+## Wie starten?
 
-:warning: Die API ist noch nicht online.
+Wenn Sie bereits Node.JS installiert haben, können Sie 
 
-## Stand
+```
+npx ts-node index.tsx
+```
+oder in `./scraper`
+```
+npx ts-node Scraper.ts
+```
 
-Aktuell enthalten sind alle Bundesgesetze und -verordnungen in ihrer aktuellen Fassung. Die Daten werden im Hintergrund regelmäßig aktualisiert und in der Datenbank verarbeitet.
+ausführen, um zu starten. Alternativ können Sie mit `npx ts-node Scraper.ts` in `./scraper` alle aktuellen Gesetze im `.xml-Format` herunterladen 
+und anschließend mit `npx ts-node index.tsx` einzeln parsen. 
+
+## Bei Fragen?
+
+Gerne eine Email an marcsogl@googlemail.com
