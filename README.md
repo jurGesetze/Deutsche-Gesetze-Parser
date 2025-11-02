@@ -1,5 +1,3 @@
-<img src="https://jurgesetze.de/static/media/deutschegesetze.png" width="540">
-
 Ein **Parser für Deutsche Gesetze** auf Grundlage der Rechtsinformationen des Bundes [gesetze-im-internet.de](http://www.gesetze-im-internet.de/). Für eine maschinelle Weiterverarbeitung (z.B. Datenbanken, Frontend, Synopsen, spezifische Abfragen etc.), sind **einheitliche Strukturen und zeitgemäße Dateiformate** unerlässlich. 
 Durch JurGesetze werden aus den vom `Bundesministerium der Justiz` bereitgestellten 
 `.xml-Dateien` einheitliche, übersichtliche und leicht verständliche maschinenlesbare `Objekte`/`Dateien`. 
