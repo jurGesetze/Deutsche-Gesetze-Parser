@@ -129,7 +129,3 @@ npx ts-node Scraper.ts
 
 ausführen, um zu starten. Alternativ können Sie mit `npx ts-node Scraper.ts` in `./scraper` alle aktuellen Gesetze im `.xml-Format` herunterladen 
 und anschließend mit `npx ts-node index.tsx` einzeln parsen. 
-
-## Bei Fragen?
-
-Gerne eine Email an marcsogl@googlemail.com
